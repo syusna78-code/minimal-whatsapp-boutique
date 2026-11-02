@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aura Studio & Boutique — Minimal Glass-Prism WhatsApp Storefront for tailored apparel. Browse, enquire, and order via WhatsApp.">
+  <title>Aura Studio & Boutique — Minimal Glass-Prism WhatsApp Storefront</title>
+
+  <!-- Google Fonts: Editorial Serif + Clean Modern Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       Header / Glass Navigation
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand-wrap">
+        <a href="#hero" class="brand-logo shop-name-target" aria-label="Aura Studio Homepage">
+          Aura Studio & Boutique
+        </a>
+        <span class="brand-subtext shop-tagline-target">Art-Directed Minimal Wardrobe</span>
+      </div>
+
+      <nav class="header-actions" aria-label="Main Navigation">
+        <a href="#catalogue" class="nav-link">Catalogue</a>
+        <a href="#policies" class="nav-link">Policies</a>
+        <button id="cart-trigger" class="cart-trigger-btn" type="button" aria-label="View Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span>Bag</span>
+          <span id="cart-badge" class="cart-badge" aria-live="polite">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ======================================================================
+         Hero Section: Image-Led with Cosmic Latte / Mocha / Burgundy Overlays
+         ====================================================================== -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-headline">
+      <div class="hero-bg-container" aria-hidden="true">
+        <img id="hero-bg-image" class="hero-bg-image" src="assets/images/hero-fashion.jpg" alt="">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <span id="hero-badge" class="hero-badge">Collection Nº 04 / Autumn 2026</span>
+          <h1 id="hero-headline" class="hero-title">Modern tailoring rendered with an artful, glass-prism silhouette.</h1>
+          <p id="hero-subheadline" class="hero-lead">
+            Curated seasonal apparel cut from raw silk, structured linen, and fine merino. Inspect details below and enquire or order directly via WhatsApp.
+          </p>
+          <div class="hero-actions">
+            <a href="#catalogue" class="btn-primary">
+              <span>Explore Collection</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+              </svg>
+            </a>
+            <a href="#policies" class="btn-secondary">
+              <span>Boutique Care & Sizing</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Filter & Catalogue Section
+         ====================================================================== -->
+    <section id="catalogue" class="catalogue-section" aria-labelledby="catalogue-heading">
+      <div class="container">
+        <div class="filter-bar">
+          <div class="filter-header">
+            <div>
+              <h2 id="catalogue-heading" class="section-title">The Garments</h2>
+              <p style="font-size: 0.9rem; color: var(--color-muted);">Select size and colour options or enquire directly about any piece via WhatsApp.</p>
+            </div>
+            <div id="category-pills" class="category-pills" role="toolbar" aria-label="Filter products by category">
+              <!-- Dynamically populated by app.js -->
+            </div>
+          </div>
+        </div>
+
+        <div id="product-grid" class="product-grid" role="region" aria-live="polite">
+          <!-- Dynamically populated from structured product data -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Verified Trust & Policies Area
+         ====================================================================== -->
+    <section id="policies" class="trust-section" aria-labelledby="policies-heading">
+      <div class="container">
+        <h2 id="policies-heading" class="section-title" style="margin-bottom: 2rem; text-align: center;">Verified Boutique Standards</h2>
+        <div class="trust-grid">
+          <div class="trust-card">
+            <div class="trust-card-icon" aria-hidden="true">📐</div>
+            <h3 class="trust-card-title">Sizing & Tailoring</h3>
+            <p id="policy-sizing" class="trust-card-desc">
+              Standard contemporary sizing (S, M, L). For specific chest, waist, and length measurements before purchasing, use 'Ask about this product' on any garment.
+            </p>
+          </div>
+          <div class="trust-card">
+            <div class="trust-card-icon" aria-hidden="true">🌿</div>
+            <h3 class="trust-card-title">Natural Textiles</h3>
+            <p id="policy-fabric" class="trust-card-desc">
+              Constructed with breathable natural textiles: Mulberry raw silk, organic Belgian linen, and high-twist wool. Dry clean or gentle cold wash recommended.
+            </p>
+          </div>
+          <div class="trust-card">
+            <div class="trust-card-icon" aria-hidden="true">💬</div>
+            <h3 class="trust-card-title">Direct WhatsApp Service</h3>
+            <p id="policy-confirmation" class="trust-card-desc">
+              Order directly with the boutique owner. Messages open pre-filled in your WhatsApp app. Availability, payment options, and courier details are confirmed 1-on-1.
+            </p>
+          </div>
+          <div class="trust-card">
+            <div class="trust-card-icon" aria-hidden="true">📦</div>
+            <h3 class="trust-card-title">Delivery & Returns</h3>
+            <p id="policy-delivery" class="trust-card-desc">
+              Pan-India shipping in 3–5 business days. Delivery rates and courier options are confirmed directly by the boutique seller in WhatsApp chat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       Product Detail Modal (Glass-Prism Overlay)
+       ======================================================================== -->
+  <div id="product-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-product-title">
+    <div class="modal-window">
+      <button id="modal-close-btn" class="modal-close-btn" type="button" aria-label="Close details dialog">&times;</button>
+      <div class="product-detail-layout">
+        <div id="modal-media-wrap" class="product-detail-media">
+          <img id="modal-product-image" class="product-detail-image" src="" alt="">
+        </div>
+        <div class="product-detail-content">
+          <span id="modal-product-category" class="product-detail-tag">Outerwear</span>
+          <h2 id="modal-product-title" class="product-detail-title">Garment Name</h2>
+          <div id="modal-product-price" class="product-detail-price">₹0</div>
+          <div id="modal-product-sku" style="font-size: 0.8rem; color: var(--color-muted); margin-bottom: 0.75rem;"></div>
+          <p id="modal-product-desc" class="product-detail-desc">Garment description text.</p>
+
+          <!-- Size Selector -->
+          <div class="selector-group">
+            <div class="selector-label">
+              <span>Select Size</span>
+              <span style="font-weight: 400; font-size: 0.8rem; color: var(--color-muted);">Mandatory</span>
+            </div>
+            <div id="size-options" class="selector-options" role="radiogroup" aria-label="Available Sizes">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Colour Selector -->
+          <div class="selector-group">
+            <div class="selector-label">
+              <span>Select Colour</span>
+              <span style="font-weight: 400; font-size: 0.8rem; color: var(--color-muted);">Mandatory</span>
+            </div>
+            <div id="color-options" class="selector-options" role="radiogroup" aria-label="Available Colours">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Stock Status Badge -->
+          <div id="modal-stock-status" class="modal-stock-status status-ok" role="status">
+            In stock
+          </div>
+
+          <!-- Quantity Stepper -->
+          <div class="qty-stepper-wrap">
+            <span style="font-size: 0.85rem; font-weight: 600;">Quantity:</span>
+            <div class="qty-stepper">
+              <button id="detail-qty-minus" class="qty-btn" type="button" aria-label="Decrease quantity">−</button>
+              <input id="detail-qty-input" class="qty-input" type="number" min="1" max="10" value="1" aria-label="Quantity" readonly>
+              <button id="detail-qty-plus" class="qty-btn" type="button" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+
+          <!-- Modal Action Buttons -->
+          <div class="modal-actions">
+            <button id="btn-add-to-cart" class="btn-add-cart" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+              <span>Add to Bag</span>
+            </button>
+
+            <!-- FR-04: Distinct WhatsApp Product Enquiry Action -->
+            <button id="btn-detail-enquiry" class="btn-whatsapp-enquiry" type="button">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+              <span>Ask about this product on WhatsApp</span>
+            </button>
+            <p class="enquiry-hint">Have fit, fabric, or shipping questions? Enquire directly without adding to cart.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Shopping Bag / Cart Drawer (Glass-Prism Sliding Panel)
+       ======================================================================== -->
+  <div id="cart-backdrop" class="cart-drawer-backdrop" aria-hidden="true"></div>
+  <aside id="cart-drawer" class="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping Bag">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">Shopping Bag</h3>
+      <button id="cart-close-btn" class="modal-close-btn" style="position: static;" type="button" aria-label="Close Shopping Bag">&times;</button>
+    </div>
+
+    <div id="cart-items-container" class="cart-items-container" role="region" aria-live="polite">
+      <!-- Dynamically populated -->
+    </div>
+
+    <div class="cart-drawer-footer">
+      <!-- FR-06: Customer Input (Optional, never saved to localStorage) -->
+      <div class="customer-info-box">
+        <div class="customer-info-title">Optional Delivery Notes</div>
+        <p class="customer-info-note">Add your name and city so the boutique owner can estimate delivery fees in WhatsApp.</p>
+        <div class="customer-form-grid">
+          <div>
+            <label for="cust-name" class="sr-only" style="display:none;">Name</label>
+            <input type="text" id="cust-name" class="form-input" placeholder="Your Name (Optional)" maxlength="50" autocomplete="name">
+          </div>
+          <div>
+            <label for="cust-phone" class="sr-only" style="display:none;">Phone</label>
+            <input type="tel" id="cust-phone" class="form-input" placeholder="Phone (Optional)" maxlength="20" autocomplete="tel">
+          </div>
+          <div class="customer-form-full">
+            <label for="cust-address" class="sr-only" style="display:none;">Delivery Address / City</label>
+            <input type="text" id="cust-address" class="form-input" placeholder="Delivery City / Address (Optional)" maxlength="120">
+          </div>
+        </div>
+      </div>
+
+      <!-- Subtotal -->
+      <div class="cart-subtotal-row">
+        <span class="cart-subtotal-label">Subtotal</span>
+        <span id="cart-subtotal" class="cart-subtotal-value">₹0</span>
+      </div>
+
+      <!-- Mandatory Disclosure per PRD -->
+      <p class="cart-delivery-note">
+        * Delivery fees and final item availability are confirmed by the seller. Tapping below opens WhatsApp with your pre-filled order draft.
+      </p>
+
+      <!-- FR-05: Order on WhatsApp Button -->
+      <button id="btn-whatsapp-order" class="btn-whatsapp-order" type="button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+        </svg>
+        <span>Order on WhatsApp</span>
+      </button>
+
+      <div class="cart-footer-links">
+        <button id="btn-clear-cart" class="btn-clear-cart" type="button">Clear Shopping Bag</button>
+        <span style="font-size: 0.75rem; color: var(--color-muted);">No payment taken on site</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       Footer (Espresso Shadow Deep Foundation)
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand shop-name-target">Aura Studio & Boutique</div>
+          <p class="footer-lead">
+            An independent clothing studio celebrating mindful tailoring and natural textiles. All orders and customer consultations are handled personally via WhatsApp.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Client Care</h4>
+          <ul class="footer-links">
+            <li class="footer-link-item"><a href="#policies">Sizing Standards</a></li>
+            <li class="footer-link-item"><a href="#policies">Fabric Maintenance</a></li>
+            <li class="footer-link-item"><a href="#policies">Delivery Policy</a></li>
+            <li class="footer-link-item"><a href="#policies">Exchange Terms</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">WhatsApp Orders</h4>
+          <div class="footer-notice-box">
+            <p>Orders are placed via WhatsApp message. Seller confirms stock and payment instructions directly with each client.</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 <span class="shop-name-target">Aura Studio & Boutique</span>. All rights reserved.</p>
+        <p>Minimal Glass-Prism WhatsApp Boutique Architecture • PRD v2.0</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container (Live Region) -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Scripts: Ordered dependency loading -->
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/whatsapp.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
